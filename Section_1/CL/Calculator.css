@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("data/B.jpg");
+  background-size: contain;
+  font-family: 'GangwonEdu_OTFBoldA';
+  
+}
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.wrap {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/*본체*/
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-image: linear-gradient(to right top, #a4cbd2, #afd0d2, #bad6d3, #c6dad5, #d2dfd9, #d8e2db, #dde5dd, #e3e8df, #e7e9dd, #eceada, #f3ead9, #fbead8);
+  padding: 1.5rem 1rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: rgb(38, 57, 77) 0px 30px 35px -8px;
+  border: 5px solid #E7E5E5;
+}
+
+/*화면*/
+.display-container {
+  grid-column: span 4;
+  background-image: linear-gradient(to right top, #a7cbd3, #b4d6d0, #c9decd, #e2e5cf, #faebd8);  background-image: url("data/bunny.png");
+  opacity: 0.65;
+  border: 1px solid white;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+  text-align: end;
+  margin: 0 .8rem;
+  padding: 1rem;
+  width: calc(200px + 1.5rem);
+  height: 7rem;
+  position: relative;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+/*미리보기*/
+.display-1 {
+  opacity: .4;
+  height: 20px;
+  overflow: hidden;   /*넘치는거 가림*/
+  background-image: linear-gradient(to right top, #efefef, #f0eef0, #f4ecee, #f7ebe9, #f7ebe3);}
+/*현재창(입력숫자)*/
+.display-2 {
+  opacity: .5;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to right top, #efefef, #f0eef0, #f4ecee, #f7ebe9, #f7ebe3);}
+
+
+/*결과값*/
+.temp-result {
+  opacity: .6;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to right top, #efefef, #f0eef0, #f4ecee, #f7ebe9, #f7ebe3);}
+
+
+/*숫자 키패드*/
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: .3rem;
+  font-size: 1.4rem;
+  background: #363636;
+  color: #fff;
+}
+/*AC키패드*/
+.button:nth-child(2),
+.button:nth-child(3),
+.button:nth-child(4) {
+  background: #A4BFC2;
+  color: black;
+  border: 3px solid #B6B6B6;
+}
+/* 사칙연산 키패드*/
+.button:nth-child(5),
+.button:nth-child(9),
+.button:nth-child(13),
+.button:nth-child(17),
+.button:nth-child(20) {
+  font-size: 1.8rem;
+  border: 2px solid #A3A3A3;
+  background: url("data/logo.png") 0 0 no-repeat;
+}
+
+
+
+.button:nth-child(18) {
+  width: calc(100px + .8rem);
+  border-radius: 42px;
+  grid-column: span 2;
+}
+
+.logo {
+  padding: 110px;
+  top: 111px;
+  opacity: 0.4;
+  filter : grayscale(30%);
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}

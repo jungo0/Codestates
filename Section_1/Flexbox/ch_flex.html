@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .wrap{display:Flex; height:100vh}
+        .box{border:1px solid red; display:flex; flex-direction: column; flex-basis: 0;}
+        .box1{flex-grow: 1;}
+        .box2{flex-grow: 2;}
+        .box3{flex-grow: 7;}
+        .box .section{border:1px solid blue; flex-basis: 0;}
+        .box2 .section:nth-child(1){flex-grow: 4;}
+        .box2 .section:nth-child(2){flex-grow: 4;}
+        .box2 .section:nth-child(3){flex-grow: 2;}
+        .box3 .section:nth-child(1){flex-grow: 8;}
+        .box3 .section:nth-child(2){flex-grow: 2;}
+    </style>
+    <div class="wrap">
+        <div class="box1 box">
+            <box class="section">section</box>
+            <box class="section">section</box>
+            <box class="section">section</box>
+        </div>
+        <div class="box2 box">
+            <box class="section">section</box>
+            <box class="section">section</box>
+            <box class="section">section</box>
+        </div>
+        <div class="box3 box">
+            <box class="section">section</box>
+            <box class="section">section</box>
+        </div>
+    </div>
+    
+</body>
+</html>
